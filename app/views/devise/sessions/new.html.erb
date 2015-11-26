@@ -20,7 +20,10 @@
           <% end -%>
         </div>
 
-        <div><%= f.submit "Sign in", class: "btn btn-primary" %></div>
+        <div><%= f.submit "Sign in", class: "btn btn-primary" %>
+          <%= link_to "Facebook Sign in", user_omniauth_authorize_path(:facebook), class: "btn btn-primary" %>
+
+        </div>
     <% end %>
     <hr>
     <%= render "devise/shared/links" %>
