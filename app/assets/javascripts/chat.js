@@ -96,7 +96,7 @@ var ready = function () {
 
             $("body").append('<div id="chatbox_' + conversation_id + '" class="chatbox"></div>')
 
-            $.get("conversations/" + conversation_id, function (data) {
+            $.get("venues/1/conversations/" + conversation_id, function (data) {
                 $('#chatbox_' + conversation_id).html(data);
                 $("#chatbox_" + conversation_id + " .chatboxcontent").scrollTop($("#chatbox_" + conversation_id + " .chatboxcontent")[0].scrollHeight);
             }, "html");
@@ -179,6 +179,7 @@ var ready = function () {
                 if (message != '') {
                     $('#conversation_form_' + conversation_id).submit();
                     $(chatboxtextarea).val('');
+                    console.log("I see this!");
                     $(chatboxtextarea).focus();
                     $(chatboxtextarea).css('height', '44px');
                 }

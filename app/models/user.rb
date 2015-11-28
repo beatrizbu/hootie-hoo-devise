@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   has_many :conversations, :foreign_key => :sender_id
   validates :name, presence: true
 
+  belongs_to :venue
+
   has_one :profile
   accepts_nested_attributes_for :profile
   after_create :profile
@@ -32,10 +34,10 @@ class User < ActiveRecord::Base
       user.attributes = params
       user.valid?
     end
-  else
-    super
+    else
+      super
+    end
   end
-end
 def password_required?
   super && provider.blank?
 end

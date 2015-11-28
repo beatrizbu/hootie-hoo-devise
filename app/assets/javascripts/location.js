@@ -48,6 +48,17 @@ function createMarker(place) {
 
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent(place.name);
+
+    var place_name = place.name;
+    console.log("Name is " + place_name);
     infowindow.open(map, this);
+
+    $.get("/venues/chatroom",
+      {"place_name": place_name},
+      function(data) {
+        alert("heyyyy");
+      },
+      'script');
+      alert(0);
   });
 }
