@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   # before_create :build_profile #creates profile at user registration
   after_create :create_default_conversation
 
+
   def profile
     self.build_profile(user_id: self.id)
   end
@@ -21,9 +22,17 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid      = auth.uid
       user.email    = auth.info.email
-      user.name     = auth.info.name
+      user.name     = auth.info.first_name
+      user.image    = auth.info.image
+      user.password = Devise.friendly_token[0,20]
       user.save!
     end
+  end
+
+
+
+  def normalimage
+  "http://graph.facebook.com/#{self.uid}/picture?type=small"
   end
 
   def self.new_with_session(params, session)
