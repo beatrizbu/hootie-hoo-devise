@@ -2312,7 +2312,7 @@ label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: normal;
 }
 input[type="search"] {
     -webkit-box-sizing: border-box;
@@ -3901,7 +3901,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-top: 8px;
     margin-right: 15px;
     margin-bottom: 8px;
-    background-color: transparent;
+    background-color: #4EB1E8;
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
