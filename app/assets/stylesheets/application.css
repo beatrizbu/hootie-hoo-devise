@@ -86,7 +86,9 @@ img.navbar-brand {
   }
 }*/
 
-
+.btn btn-primary{
+  font-family: 'Francoise One', sans serif;
+}
 
 .actions {
   color: #4eb1e8;

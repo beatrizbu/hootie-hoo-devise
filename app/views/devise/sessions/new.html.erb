@@ -4,11 +4,13 @@
     <div class="jumbotron">
 
       <div class="row">
-
+        <div class="col-md-6 col-md-6">
           <h1 class="title">Hootie-Hoo</h1>
           <h2 class="motto">Breaking the ice one hoot at a time!</h2>
-          <div class="hootie-hoot">
-            <div class="col-md-4 col-md-offset-4">
+        </div>
+            <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4">
+
+              <div class="hootie-hoot">
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                 <div class="form-group">
                   <%= f.label :email %>
@@ -27,7 +29,7 @@
                   <% end -%>
                 </div>
 
-                <div><%= f.submit "Sign in", class: "btn btn-primary" %>
+                <div><%= f.submit "Sign In", class: "btn btn-primary" %>
                   <%= link_to "Facebook Sign in", user_omniauth_authorize_path(:facebook), class: "btn btn-primary" %>
                 </div>
           <% end %>
