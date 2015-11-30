@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "HOOTIE-HOO", root_path, class: "navbar-brand" %>
+      <%= link_to (image_tag "blinking-owl.gif", class: "navbar-brand"), root_path  %>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -23,13 +23,10 @@
             </li>
         <% else %>
             <li>
-              <%= link_to "Signin", new_user_session_path %>
+              <%= link_to "Sign In", new_user_session_path %>
             </li>
             <li>
-            <%= link_to "Facebook Sign in", user_omniauth_authorize_path(:facebook) %>
-          </li>
-            <li>
-              <%= link_to "Create account", new_user_registration_path %>
+              <%= link_to "Sign Up", new_user_registration_path %>
             </li>
         <% end %>
         <!-- <li><%= link_to "Tutorial Link", "http://josephndungu.com/tutorials/gmail-like-chat-application-in-ruby-on-rails" %></li> -->

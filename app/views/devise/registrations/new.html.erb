@@ -1,35 +1,40 @@
-<div class="row">
-  <div class="col-md-offset-4 col-md-4">
-    <legend>Sign up to break the ice!</legend>
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+<div class="container-full">
+  <div class="jumbotron">
+    <div class="row">
+      <h1 class="title">Hootie-Hoo</h1>
+        <h2 class="motto">Breaking the ice one hoot at a time!</h2>
+          <div class="hootie-hoot">
+            <div class="col-md-offset-4 col-md-4">
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+              <div class="form-group">
+                <%= f.label :name %>
+                <%= f.text_field :name, autofocus: true, class: "form-control" %></div>
 
-        <div class="form-group">
-          <%= f.label :name %>
-          <%= f.text_field :name, autofocus: true, class: "form-control" %></div>
+              <div class="form-group">
+                <%= f.label :email %>
+                <%= f.email_field :email, class: "form-control" %></div>
+              <% if f.object.password_required? %>
+                <div class="form-group">
+                <%= f.label :password %>
+                <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
 
-        <div class="form-group">
-          <%= f.label :email %>
-          <%= f.email_field :email, class: "form-control" %></div>
-        <% if f.object.password_required? %>
-          <div class="form-group">
-          <%= f.label :password %>
-          <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
+                <div class="form-group">
+                <%= f.label :password_confirmation %>
+                <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
+              <% end %>
 
-          <div class="form-group">
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
-        <% end %>
+              <ul>
+                <div><%= f.submit "Sign up", class: "btn btn-primary" %>
+                <%= link_to "Facebook Sign in", user_omniauth_authorize_path(:facebook), class: "btn btn-primary" %>
+                </div>
+              </ul>
+              <% end %>
 
-        <ul>
-          <div><%= f.submit "Sign up", class: "btn btn-success" %>
-          <%= link_to "Facebook Sign in", user_omniauth_authorize_path(:facebook), class: "btn btn-success" %>
-          </div>
-        </ul>
-    <% end %>
-    <hr>
 
     <!-- <%= render "devise/shared/links" %> -->
-
+            </div>
+        </div>
+      </div>
   </div>
 </div>

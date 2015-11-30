@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :profiles
   authenticated :user do
     devise_scope :user do
-      root 'users#index'
+      root 'profiles#show'
+      get '/users/', to: 'users#index'
+
       # root 'locations#index'
     end
   end

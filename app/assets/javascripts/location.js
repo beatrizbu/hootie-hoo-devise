@@ -1,3 +1,8 @@
+
+function theFunction() {
+  console.log("I'm working!");
+};
+
 var map;
 var infowindow;
 
@@ -49,5 +54,7 @@ function createMarker(place) {
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent(place.name);
     infowindow.open(map, this);
+    window.location = '/users';
+
   });
 }

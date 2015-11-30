@@ -1,11 +1,12 @@
-<div class="row">
+
+<div class="row", id="chat">
   <!-- Not implemented on tutorial -->
   <div class="col-md-4">
     <div style="height: 300px; overflow-y: auto;">
       <div class="panel panel-default">
         <!-- Default panel contents -->
         <br><br><br><br>
-        <div class="panel-heading">Registered Users</div>
+        <div class="panel-heading">Hooties!</div>
 
         <!-- Table -->
         <table class="table">
@@ -20,7 +21,7 @@
               <tr>
                 <td><%= user.name %></td>
                 <td>
-                  <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
+                  <%= link_to "Send Hoot!", "#", class: "btn btn-primary btn-xs start-conversation",
                               "data-sid" => current_user.id, "data-rip" => user.id %>
                 </td>
               </tr>
