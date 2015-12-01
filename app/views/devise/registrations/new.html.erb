@@ -1,10 +1,10 @@
-<div class="container-full">
-  <!-- <div class="jumbotron"> -->
+<!-- <div class="container-full"> -->
+  <div class="jumbotron">
     <div class="row">
       <h1 class="title">Hootie-Hoo</h1>
         <h2 class="motto">Breaking the ice one hoot at a time!</h2>
+        <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4">
           <div class="hootie-hoot">
-            <div class="col-md-offset-4 col-md-4">
               <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
               <%= devise_error_messages! %>
               <div class="form-group">
@@ -25,15 +25,15 @@
               <% end %>
 
               <ul>
-                <div><%= f.submit "Sign up", class: "btn btn-primary" %>
-                <%= link_to "Facebook Sign in", user_omniauth_authorize_path(:facebook), class: "btn btn-primary" %>
+                <div><%= f.submit "Sign Up", class: "btn btn-primary" %>
+                <%= link_to "Facebook Sign In", user_omniauth_authorize_path(:facebook), class: "btn btn-primary" %>
                 </div>
               </ul>
               <% end %>
 
 
     <!-- <%= render "devise/shared/links" %> -->
-            </div>
+            <!-- </div> -->
         </div>
       </div>
   </div>

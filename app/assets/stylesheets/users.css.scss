@@ -6,6 +6,13 @@ body {
   // height: 100%;
 }
 
+.motto {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    text-shadow: 0.5px 0.5px 0.5px #000000;
+}
+
 li.media {
   position: relative;
 }
@@ -146,6 +153,20 @@ h1.title {
 
 .message {
   float: right;
+}
+
+
+ .jumbotron {
+    background-image: url(/assets/cocktails.jpg);
+    background-size: 100%;
+    margin-top: 50px;
+    margin-right: -142px;
+    margin-left: -140px;
+    padding: 0 0 0 0;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
 }
 
 // a.btn.btn-primary.btn-xs.start-conversation {
