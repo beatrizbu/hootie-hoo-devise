@@ -1,7 +1,7 @@
-<div class="row">
+<div class="col-sm-12">
   <!-- Not implemented on tutorial -->
-  <div class="col-md-6">
-    <div style="height: 300px; overflow-y: auto;">
+  <div class="col-sm-6">
+    <div style="height: 300px">
       <div class="panel panel-default">
         <!-- Default panel contents -->
 
@@ -35,9 +35,12 @@
   </div>
     <hr>
     <br>
-    <h3>Your Conversations</h3>
+    <div class="col-sm-6">
+    <div style="height: 300px; width:200px;">
+    <div style="color: #1DB0EB; font-size: 24px; font-family: verdana">Conversations</div>
 
-    <div style="height: 400px; overflow-y: auto;">
+
+    <!-- <div style="height: 400px; overflow-y: auto;"> -->
       <% if @conversations.any? %>
           <ul class="media-list">
             <% @conversations.each do |conversation| %>
@@ -45,7 +48,7 @@
                   <%= image_tag current_user.normalimage %>
                   <div class="media-body">
                     <%= link_to "", conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %>
-                        <h4 class="media-heading"><%= conversation_interlocutor(conversation).name %></h4>
+                        <h5 class="media-heading"><%= conversation_interlocutor(conversation).name %></h5>
                         <p><%= conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45) %></p>
                   </div>
                 </li>
@@ -53,12 +56,11 @@
             <% end %>
           </ul>
       <% else %>
-          <p>You have no conversations. Click send message with any user to create one.</p>
+          <p>You have no conversations. Click Send Hoot with any user to create one.</p>
       <% end %>
     </div>
 
   </div>
 
-  <div class="col-md-4">
-
-  </div>
+</div>
+</div>
