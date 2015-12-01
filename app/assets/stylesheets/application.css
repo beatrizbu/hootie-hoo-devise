@@ -18,10 +18,11 @@
      min-height: 100%;
      margin: 0;
      padding: 0;
-     background-color: #dff0d8;
+     background-color: #4EB1E8;
+     /*background-image: image(/images/"woodtexture1584.jpg");*/
 
+     }
 
-   }
    #map {
      height: 100%;
    }
@@ -98,5 +99,5 @@ img.navbar-brand {
 
 .locations {
   text-align: center;
-  color: #4EB1E8;
+  color: #FFF;
 }

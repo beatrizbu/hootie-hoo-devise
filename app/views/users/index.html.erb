@@ -1,3 +1,5 @@
+<!-- <div style="background-image: url(http://bgfons.com/upload/wood%20_texture1584.jpg)"> -->
+<!-- <body STYLE="background-image: url(http://bgfons.com/upload/wood%20_texture1584.jpg)"> -->
 <div class="col-sm-12">
   <!-- Not implemented on tutorial -->
   <div class="col-sm-6">
@@ -20,9 +22,16 @@
           <% @users.each_with_index do |user, index| %>
               <tr>
                 <td><%= user.name %></td>
+              <td>
+                <div class="media">
+                    <%= image_tag current_user.normalimage , class: "media-object pull-left" %>
+                  </div>
                 <td>
+                  <div class="message">
+
                   <%= link_to "Send Hoot!", "#", class: "btn btn-primary btn-xs start-conversation",
                               "data-sid" => current_user.id, "data-rip" => user.id %>
+                  </div>
                 </td>
               </tr>
           <% end %>
@@ -34,13 +43,10 @@
     </div>
   </div>
     <hr>
-    <br>
+    <!-- <br>
     <div class="col-sm-6">
     <div style="height: 300px; width:200px;">
-    <div style="color: #1DB0EB; font-size: 25px, font-family: verdana;"">Conversations</div>
-
-
-    <!-- <div style="height: 400px; overflow-y: auto;"> -->
+    <div style="color: #1DB0EB; font-size: 25px, font-family: verdana;">Conversations</div>
       <% if @conversations.any? %>
           <ul class="media-list">
             <% @conversations.each do |conversation| %>
@@ -60,7 +66,8 @@
       <% end %>
     </div>
 
-  </div>
+  </div> -->
 
 </div>
 </div>
+<!-- </body> -->
