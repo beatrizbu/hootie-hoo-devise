@@ -1,1 +1,2 @@
-
+Final project built with Erict Litow ans Stefani Kaufman. 
+An application that allow users to have multiple real time chats based on their location
