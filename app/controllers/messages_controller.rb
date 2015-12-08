@@ -6,10 +6,12 @@ class MessagesController < ApplicationController
     @message = @conversation.messages.build(message_params)
     @message.user_id = current_user.id
     @message.save!
-    PrivatePub.publish_to("/conversations/#{@conversation}/new",
-    "alert{'#{@message.body}'});")
+    # PrivatePub.publish_to("/conversations/#{@conversation}/new",
+    # "alert{'#{@message.body}'});")
 
     @path = conversation_path(@conversation)
+      rip = current_user == @conversation.recipient ? @conversation.sender : @conversation.recipient
+      PrivatePub.publish_to("/notifications" + rip.id.to_s, cid: @conversation.id, sid: current_user.id, rip:  rip.id)
   end
 
   private
