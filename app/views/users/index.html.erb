@@ -13,10 +13,9 @@
         <!-- Table -->
         <table class="table">
           <thead>
-          <tr>
-            <th>Hootie-Hoo suggests: Truth or Dare to break the ice?</th>
-            <th></th>
-          </tr>
+            <div class="col-sm-12">
+            <%= "Hootie-Hoo suggests: Truth or Dare to break the ice?" %>
+          </div>
           </thead>
           <tbody>
           <% @users.each_with_index do |user, index| %>
@@ -30,7 +29,7 @@
                   <div class="message">
 
                   <%= link_to "Send Hoot!", "#", class: "btn btn-primary btn-xs start-conversation",
-                              "data-sid" => current_user.id, "data-rip" => user.id %>
+                              "data-sid" => current_user.id, "data-rip" => user.id  %>
                   </div>
                 </td>
               </tr>

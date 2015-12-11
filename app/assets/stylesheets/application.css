@@ -43,6 +43,13 @@ img.navbar-brand {
   height: 50px;
 
 }
+
+.table > thead > tr > th {
+    /* vertical-align: bottom; */
+    border-bottom: 1px solid #ddd;
+    width:auto;
+
+}
 /*
 @media(max-width: 500px) {
   img.navbar-brand {

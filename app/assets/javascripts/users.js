@@ -11,11 +11,19 @@ var ready = function () {
 
         var sender_id = $(this).data('sid');
         var recipient_id = $(this).data('rip');
+        // var newWindow = window.open("", "new window", "width=200, height=100");
 
-        $.post("/conversations", { sender_id: sender_id, recipient_id: recipient_id }, function (data) {
+        $.post("/conversations/", { sender_id: sender_id, recipient_id: recipient_id }, function (data) {
             chatBox.chatWith(data.conversation_id);
         });
     });
+
+
+    //open a new window note:this is a popup so it may be blocked by your browser
+// var newWindow = window.open("", "new window", "width=200, height=100");
+
+//write the data to the document of the newWindow
+// newWindow.document.write(data);
 
     /**
      * Used to minimize the chatbox

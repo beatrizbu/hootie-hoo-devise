@@ -16,3 +16,4 @@
 /tmp
 .idea/
 *.keep
+.DS_Store
